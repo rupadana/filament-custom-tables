@@ -10,11 +10,11 @@ use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
 use Livewire\Features\SupportTesting\Testable;
+use Rupadana\FilamentCustomTables\Commands\FilamentCustomTablesCommand;
+use Rupadana\FilamentCustomTables\Testing\TestsFilamentCustomTables;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Rupadana\FilamentCustomTables\Commands\FilamentCustomTablesCommand;
-use Rupadana\FilamentCustomTables\Testing\TestsFilamentCustomTables;
 
 class FilamentCustomTablesServiceProvider extends PackageServiceProvider
 {

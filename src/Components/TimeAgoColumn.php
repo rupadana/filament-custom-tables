@@ -8,13 +8,13 @@ class TimeAgoColumn extends TextColumn
 {
     protected string $view = 'filament-custom-tables::time-ago-column';
 
-    protected array $dateLabel = ["years", "months", "days", "hours", "minutes", "seconds"];
+    protected array $dateLabel = ['years', 'months', 'days', 'hours', 'minutes', 'seconds'];
 
     protected int $interval = 1000; // in ms
 
     /**
      * Get the value of dateLabel
-     */ 
+     */
     public function getDateLabel()
     {
         return $this->dateLabel;
@@ -24,8 +24,8 @@ class TimeAgoColumn extends TextColumn
      * Set the value of dateLabel
      *
      * @return  self
-     */ 
-    public function dateLabel(string $years = 'years',string $months = 'months', string $days = 'days', string $hours = 'hours', string $minutes = 'minutes', string $seconds = 'seconds' )
+     */
+    public function dateLabel(string $years = 'years', string $months = 'months', string $days = 'days', string $hours = 'hours', string $minutes = 'minutes', string $seconds = 'seconds')
     {
         $this->dateLabel = [
             $years,
@@ -33,7 +33,7 @@ class TimeAgoColumn extends TextColumn
             $days,
             $hours,
             $minutes,
-            $seconds
+            $seconds,
         ];
 
         return $this;
@@ -41,7 +41,7 @@ class TimeAgoColumn extends TextColumn
 
     /**
      * Get the value of interval
-     */ 
+     */
     public function getInterval()
     {
         return $this->interval;
@@ -51,7 +51,7 @@ class TimeAgoColumn extends TextColumn
      * Set the value of interval in miliseconds
      *
      * @return  self
-     */ 
+     */
     public function interval(int $interval = 1000)
     {
         $this->interval = $interval;
