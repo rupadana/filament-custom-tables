@@ -12,10 +12,14 @@ class TimeAgoColumn extends TextColumn
 
     protected int $interval = 1000; // in ms
 
+    protected string $prefixText = '';
+
+    protected string $suffixText = '';
+
     /**
      * Get the value of dateLabel
      */
-    public function getDateLabel()
+    public function getDateLabel(): array
     {
         return $this->dateLabel;
     }
@@ -42,7 +46,7 @@ class TimeAgoColumn extends TextColumn
     /**
      * Get the value of interval
      */
-    public function getInterval()
+    public function getInterval(): int
     {
         return $this->interval;
     }
@@ -55,6 +59,46 @@ class TimeAgoColumn extends TextColumn
     public function interval(int $interval = 1000)
     {
         $this->interval = $interval;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of prefix
+     */
+    public function getPrefixText(): string
+    {
+        return $this->prefixText;
+    }
+
+    /**
+     * Set the value of prefix
+     *
+     * @return  self
+     */
+    public function prefixText(string $prefix)
+    {
+        $this->prefixText = $prefix;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of suffix
+     */
+    public function getSuffixText(): string
+    {
+        return $this->suffixText;
+    }
+
+    /**
+     * Set the value of suffix
+     *
+     * @return  self
+     */
+    public function suffixText(string $suffix)
+    {
+        $this->suffixText = $suffix;
 
         return $this;
     }

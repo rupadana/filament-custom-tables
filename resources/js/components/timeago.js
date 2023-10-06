@@ -3,12 +3,16 @@ export default function timeago({
     id,
     dateLabel = ["years", "months", "days", "hours", "minutes", "seconds"],
     interval = 1000,
+    prefix = '',
+    suffix = '',
 }) {
     return {
         strdate,
         dateLabel,
         interval,
         id,
+        prefix,
+        suffix,
         getTimeAgo() {
             var date1 = new Date();
             var date2 = new Date(this.strdate * 1000)
@@ -55,11 +59,14 @@ export default function timeago({
                     if (datestring != '') {
                         datestring += ' ';
                     }
-
                     datestring += val + this.dateLabel[i];
                 }
             })
 
+            if(this.prefix) datestring = this.prefix + ' ' + datestring;
+
+            if (this.suffix) datestring = datestring + ' ' + this.suffix;
+            
             return datestring;
         },
         init() {

@@ -55,7 +55,9 @@ $arrayState = \Illuminate\Support\Arr::wrap($arrayState);
         id: @js($columnId),
         strdate: @js(strtotime($getState())),
         dateLabel: @js($getDateLabel()),
-        interval: @js($getInterval())
+        interval: @js($getInterval()),
+        suffix: @js($getSuffixText()),
+        prefix: @js($getPrefixText())
     })"
 
     >

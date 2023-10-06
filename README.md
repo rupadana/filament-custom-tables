@@ -22,6 +22,8 @@ TimeAgoColumn::make('created_at')
     ->dateLabel(seconds: 's', minutes: 'm', hours:'h', days:'d', months: 'M', years: 'Y')
     ->interval(2000) // default is 1000
 ```
+Im extends `TextColumn` class, so You can use all method on `TextColumn` class
+
 
 ## Changelog
 
