@@ -66,7 +66,6 @@ export default function timeago({
             document.getElementById(this.id).innerHTML = this.getTimeAgo()
             setInterval(() => {
                 document.getElementById(this.id).innerHTML = this.getTimeAgo()
-                
             }, this.interval);
         }
     }
