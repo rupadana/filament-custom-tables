@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Rupadana\FilamentCustomTables\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FilamentCustomTablesCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-custom-tables';
 
     public $description = 'My command';
 

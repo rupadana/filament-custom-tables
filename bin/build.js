@@ -46,5 +46,11 @@ const defaultOptions = {
 compile({
     ...defaultOptions,
     entryPoints: ['./resources/js/index.js'],
-    outfile: './resources/dist/skeleton.js',
+    outfile: './resources/dist/filament-custom-tables.js',
+})
+
+compile({
+    ...defaultOptions,
+    entryPoints: ['./resources/js/components/timeago.js'],
+    outfile: './resources/dist/components/timeago.js',
 })
