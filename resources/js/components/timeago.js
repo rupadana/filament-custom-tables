@@ -36,10 +36,12 @@ export default function timeago({
 
             if (minuteDiff < 0) {
                 hourDiff--;
+                minuteDiff = 60 + minuteDiff
             }
 
             if (hourDiff < 0) {
                 dayDiff--;
+                hourDiff = 24 + hourDiff
             }
 
             if (dayDiff < 0) {
